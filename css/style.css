@@ -1,0 +1,6 @@
+body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+header { border-bottom: 1px solid #eee; margin-bottom: 20px; }
+nav a { margin-right: 15px; text-decoration: none; color: #333; }
+ul { list-style-type: none; padding: 0; }
+li { margin-bottom: 10px; }
+.meta { color: #888; font-size: 0.9em; }
