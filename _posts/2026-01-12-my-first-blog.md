@@ -5,13 +5,16 @@ date: 2026-01-12
 category: "技术杂谈"
 ---
 
-## 欢迎
-这是我用 Markdown 写的第一篇文章。
+## hello-agents进阶篇 | 202601 Blog
+以下是关于Task 00 的一些思考
 
-### 为什么这样做？
+### Task00:环境配置，前言
+hello-agents课程讲义中,第一章部分对于agent的发展史做了很详细的介绍, 以及对于Agent行为理论框架的建模,在后续的章节都可以借鉴,其中比较受用的是这张图片
+[![沙漠中的岩石图片](/assets/img/shiprock.jpg "Shiprock")](https://markdown.com.cn)
+
 因为 Markdown 写起来很舒服：
 - **加粗**
-- *斜体*
+- *斜体112*
 - [链接](https://github.com)
 
 代码块也没问题：
@@ -19,12 +22,3 @@ category: "技术杂谈"
 print("Hello World")
 ```
 
-#### 5. 添加简单的 CSS (`css/style.css`)
-为了不让页面太丑，加一点基础样式。
-```css
-body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-header { border-bottom: 1px solid #eee; margin-bottom: 20px; }
-nav a { margin-right: 15px; text-decoration: none; color: #333; }
-ul { list-style-type: none; padding: 0; }
-li { margin-bottom: 10px; }
-.meta { color: #888; font-size: 0.9em; }
