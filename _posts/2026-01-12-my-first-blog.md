@@ -22,3 +22,5 @@ hello-agents课程讲义中,第一章部分对于agent的发展史做了很详�
 print("Hello World")
 ```
 
+### [课程&上述图片来源]：  
+Hello-Agents(https://raw.githubusercontent.com/datawhalechina/Hello-Agents)
