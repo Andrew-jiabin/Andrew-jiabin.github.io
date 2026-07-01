@@ -15,6 +15,7 @@
 - `README.md`：入口索引，说明应该先读什么。
 - `project-structure.md`：解释项目结构、页面和数据文件之间的关系。
 - `content-editing-guide.md`：详细说明每个 `_data` 文件怎么改、怎么新增博客、项目、论文、CV 项，以及图片和文件放哪里。
+- `visual-style.md`：说明当前鲜活多色视觉方向，以及如何避免改回课题组网站同色系。
 - `publishing-and-troubleshooting.md`：说明 GitHub Pages 发布注意事项、检查步骤和常见问题排查。
 - `safe-editing-boundaries.md`：列出哪些文件可以日常改，哪些文件不要轻易改，并给较弱 AI 的操作规则。
 
