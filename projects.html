@@ -12,9 +12,9 @@ nav_key: projects
     <div class="section-heading reveal">
       <p>{{ site.data.projects.intro }}</p>
     </div>
-    <div class="project-grid">
+    <div class="project-list">
       {% for project in site.data.projects.items %}
-        <article id="{{ project.slug }}" class="project-card reveal">
+        <article id="{{ project.slug }}" class="project-entry reveal">
           <div class="project-meta">
             <span>{{ project.year }}</span>
             <span>{{ project.status }}</span>
@@ -22,11 +22,14 @@ nav_key: projects
           <h2>{{ project.title }}</h2>
           <p>{{ project.summary }}</p>
           <p class="role-line">{{ project.role }}</p>
-          <div class="tag-row">
-            {% for keyword in project.keywords %}
-              <span>{{ keyword }}</span>
-            {% endfor %}
-          </div>
+          {% if project.keywords %}
+            <p class="keyword-line">
+              <span>Keywords:</span>
+              {% for keyword in project.keywords %}
+                {{ keyword }}{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </p>
+          {% endif %}
           {% if project.links %}
             <div class="link-row">
               {% for link in project.links %}

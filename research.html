@@ -24,12 +24,15 @@ nav_key: research
                 <li>{{ detail }}</li>
               {% endfor %}
             </ul>
+            {% if area.keywords %}
+              <p class="keyword-line">
+                <span>Keywords:</span>
+                {% for keyword in area.keywords %}
+                  {{ keyword }}{% unless forloop.last %}, {% endunless %}
+                {% endfor %}
+              </p>
+            {% endif %}
           </div>
-          <aside class="keyword-panel">
-            {% for keyword in area.keywords %}
-              <span>{{ keyword }}</span>
-            {% endfor %}
-          </aside>
         </article>
       {% endfor %}
     </div>

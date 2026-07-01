@@ -37,7 +37,7 @@
 这意味着：
 
 - 改一句个人简介，不应重写 `about.html`。
-- 新增一个项目，不应复制一整张项目卡片 HTML，而应在 `_data/projects.yml` 里新增一个 `items` 条目。
+- 新增一个项目，不应复制页面 HTML，而应在 `_data/projects.yml` 里新增一个 `items` 条目。
 - 新增一篇博客，应放入 `_posts/`，并写好 front matter。
 - 上传 CV PDF，应放入 `assets/files/`，再在 `_data/cv.yml` 中填写 `cv_pdf` 路径。
 

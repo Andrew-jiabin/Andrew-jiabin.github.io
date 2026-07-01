@@ -43,7 +43,7 @@ Andrew-jiabin.github.io/
 | Home | `index.html` | `_data/profile.yml`、`_data/home.yml`、`_posts/` 最新文章 | 改首页文字和按钮时优先改数据文件 |
 | About | `about.html` | `_data/profile.yml`、`_data/cv.yml` | 改个人简介、focus、经历时改数据文件 |
 | Research | `research.html` | `_data/research.yml` | 新增或修改研究方向 |
-| Projects | `projects.html` | `_data/projects.yml` | 新增或修改项目卡片 |
+| Projects | `projects.html` | `_data/projects.yml` | 新增或修改项目条目 |
 | Publications | `publications.html` | `_data/publications.yml` | 新增论文、预印本、海报、数据集 |
 | Blog | `blog.html` | `_posts/*.md` | 新增或修改博客文章 |
 | CV | `cv.html` | `_data/cv.yml` | 改教育、经历、技能、CV PDF |
@@ -59,7 +59,7 @@ Jekyll 会把 `_data/profile.yml` 变成 `site.data.profile`，把 `_data/projec
 {% for project in site.data.projects.items %}
 ```
 
-所以新增项目时，不要复制 HTML 卡片。只需要在 `_data/projects.yml` 的 `items:` 下新增一项。
+所以新增项目时，不要复制页面 HTML。只需要在 `_data/projects.yml` 的 `items:` 下新增一项。
 
 ## 内容层和功能层的边界
 

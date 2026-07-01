@@ -73,7 +73,7 @@ avatar: "/assets/images/profile/jiabin-lin-2026.png"
 
 ## `_data/home.yml`
 
-用途：控制首页的指标卡片和首页下方的三个介绍入口。
+用途：控制首页的快速入口和首页下方的几个介绍入口。
 
 主要影响页面：
 
@@ -81,7 +81,7 @@ avatar: "/assets/images/profile/jiabin-lin-2026.png"
 
 字段说明：
 
-- `metrics`：首页第一组短卡片。每项包含：
+- `metrics`：首页第一组快速入口。每项包含：
   - `value`：醒目的短词或数字。
   - `label`：说明文字。
   - `url`：点击后跳转的页面。
@@ -93,8 +93,8 @@ avatar: "/assets/images/profile/jiabin-lin-2026.png"
 
 建议：
 
-- `metrics` 保持 3 项最整齐。
-- `featured_sections` 也建议保持 3 项。
+- `metrics` 建议保持 2 到 4 项，太多会显得拥挤。
+- `featured_sections` 建议保持 2 到 4 项。它们会显示为轻量列表，不是大卡片。
 - `url` 应该指向已有页面，例如 `"/research/"`、`"/projects/"`、`"/blog/"`。
 
 ## `_data/navigation.yml`
@@ -167,7 +167,7 @@ areas:
 
 ## `_data/projects.yml`
 
-用途：控制 Projects 页面上的项目卡片。
+用途：控制 Projects 页面上的项目条目。
 
 主要影响页面：
 
@@ -178,12 +178,12 @@ areas:
 - `intro`：Projects 页顶部说明。
 - `items`：项目列表。每项包含：
   - `title`：项目名。
-  - `slug`：项目卡片的 HTML ID，必须唯一。
+  - `slug`：项目条目的 HTML ID，必须唯一。
   - `status`：状态，例如 `Exploration`、`Active notes`、`Maintained`、`Paused`。
   - `summary`：项目简介。
   - `role`：你的角色。
   - `year`：年份。
-  - `keywords`：关键词标签。
+  - `keywords`：关键词列表，会显示为一行轻量文字。
   - `links`：相关链接列表。每个链接包含 `label` 和 `url`。
 
 新增项目示例：
@@ -210,7 +210,7 @@ items:
 项目维护建议：
 
 - `slug` 用英文小写和短横线，例如 `personal-website-system`。
-- `summary` 不要太长，项目卡片里 1 到 2 句最合适。
+- `summary` 不要太长，项目条目里 1 到 2 句最合适。
 - `links` 可以省略，但如果保留，必须是列表。
 - 内部链接用站内路径，外部链接用完整 `https://...`。
 
@@ -394,7 +394,7 @@ assets/images/posts/2026-02-01-agent-workflow/diagram.png
 
 ## 新增项目
 
-项目不是单独页面，而是 Projects 页面上的卡片。新增项目时改 `_data/projects.yml`。
+项目不是单独页面，而是 Projects 页面上的条目。新增项目时改 `_data/projects.yml`。
 
 步骤：
 
