@@ -1,11 +1,22 @@
 ---
 layout: default
 ---
-<article>
-    <h2>{{ page.title }}</h2>
-    <p class="meta">发布于：{{ page.date | date: "%Y-%m-%d" }} | 分类：{{ page.category }}</p>
-    
-    <div class="post-content">
-        {{ content }}
+
+<article class="post-shell">
+  <header class="post-hero">
+    <div class="container narrow reveal">
+      <a class="eyebrow" href="{{ '/blog/' | relative_url }}">Writing</a>
+      <h1>{{ page.title }}</h1>
+      <p class="post-meta">
+        {{ page.date | date: "%Y-%m-%d" }}
+        {% if page.category %}<span>{{ page.category }}</span>{% endif %}
+      </p>
     </div>
+  </header>
+
+  <div class="container narrow">
+    <div class="prose reveal">
+      {{ content }}
+    </div>
+  </div>
 </article>

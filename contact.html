@@ -1,0 +1,39 @@
+---
+layout: page
+title: Contact
+eyebrow: "Connect"
+description: "For collaboration, research questions, project discussion, and site updates."
+permalink: /contact/
+nav_key: contact
+---
+
+<section class="section">
+  <div class="container contact-layout">
+    <div class="section-copy reveal">
+      <h2>Let's keep the conversation useful.</h2>
+      <p>Use this page for research questions, project follow-ups, collaboration notes, or corrections to site content.</p>
+      {% if site.data.profile.email != "" %}
+        <p class="contact-email"><a href="mailto:{{ site.data.profile.email }}">{{ site.data.profile.email }}</a></p>
+      {% endif %}
+      <div class="contact-links">
+        {% for item in site.data.profile.social %}
+          {% assign social = item[1] %}
+          {% if social.url != "" %}
+            <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">{{ social.label }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <aside class="aside-panel reveal">
+      <h3>Location</h3>
+      <p>{{ site.data.profile.affiliation }}</p>
+      <p>{{ site.data.profile.location }}</p>
+      <h3>Good topics</h3>
+      <ul class="compact-list">
+        {% for item in site.data.profile.focus %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </aside>
+  </div>
+</section>

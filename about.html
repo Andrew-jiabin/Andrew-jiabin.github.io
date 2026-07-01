@@ -1,0 +1,65 @@
+---
+layout: page
+title: About
+eyebrow: "Profile"
+description: "A flexible personal profile page for background, interests, and working style."
+permalink: /about/
+nav_key: about
+---
+
+<section class="section">
+  <div class="container split-layout">
+    <div class="section-copy reveal">
+      <h2>{{ site.data.profile.display_name }}</h2>
+      <p>{{ site.data.profile.intro }}</p>
+      <p>This page is intentionally structured as editable blocks. Replace the text with a fuller biography, add research milestones, or turn the focus list into a more formal academic statement when ready.</p>
+    </div>
+    <aside class="aside-panel reveal">
+      <h3>Current focus</h3>
+      <ul class="compact-list">
+        {% for item in site.data.profile.focus %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow">Timeline</p>
+      <h2>Education and experience</h2>
+    </div>
+    <div class="timeline">
+      {% for item in site.data.cv.education %}
+        <article class="timeline-item reveal">
+          <time>{{ item.period }}</time>
+          <div>
+            <h3>{{ item.degree }}</h3>
+            <p>{{ item.institution }}</p>
+            <ul>
+              {% for detail in item.details %}
+                <li>{{ detail }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </article>
+      {% endfor %}
+      {% for item in site.data.cv.experience %}
+        <article class="timeline-item reveal">
+          <time>{{ item.period }}</time>
+          <div>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.organization }}</p>
+            <ul>
+              {% for detail in item.details %}
+                <li>{{ detail }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

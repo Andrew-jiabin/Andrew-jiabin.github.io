@@ -1,0 +1,45 @@
+---
+layout: page
+title: Projects
+eyebrow: "Work"
+description: "A living archive for prototypes, course projects, engineering notes, and research tools."
+permalink: /projects/
+nav_key: projects
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p>{{ site.data.projects.intro }}</p>
+    </div>
+    <div class="project-grid">
+      {% for project in site.data.projects.items %}
+        <article id="{{ project.slug }}" class="project-card reveal">
+          <div class="project-meta">
+            <span>{{ project.year }}</span>
+            <span>{{ project.status }}</span>
+          </div>
+          <h2>{{ project.title }}</h2>
+          <p>{{ project.summary }}</p>
+          <p class="role-line">{{ project.role }}</p>
+          <div class="tag-row">
+            {% for keyword in project.keywords %}
+              <span>{{ keyword }}</span>
+            {% endfor %}
+          </div>
+          {% if project.links %}
+            <div class="link-row">
+              {% for link in project.links %}
+                {% if link.url contains '://' %}
+                  <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+                {% else %}
+                  <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

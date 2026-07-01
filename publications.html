@@ -1,0 +1,46 @@
+---
+layout: page
+title: Publications
+eyebrow: "Outputs"
+description: "Papers, preprints, posters, datasets, and other academic outputs can be added here."
+permalink: /publications/
+nav_key: publications
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p>{{ site.data.publications.intro }}</p>
+    </div>
+    {% if site.data.publications.items.size > 0 %}
+      <ol class="publication-list">
+        {% for publication in site.data.publications.items %}
+          <li class="publication-item reveal">
+            <span>{{ publication.year }}</span>
+            <div>
+              <h2>{{ publication.title }}</h2>
+              <p>{{ publication.authors | join: ", " }}</p>
+              <p>{{ publication.venue }}{% if publication.status %} · {{ publication.status }}{% endif %}</p>
+              {% if publication.links %}
+                <div class="link-row">
+                  {% for link in publication.links %}
+                    {% if link.url contains '://' %}
+                      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+                    {% else %}
+                      <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    {% else %}
+      <div class="empty-state reveal">
+        <h2>Coming soon</h2>
+        <p>{{ site.data.publications.empty_state }}</p>
+      </div>
+    {% endif %}
+  </div>
+</section>

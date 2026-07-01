@@ -1,0 +1,37 @@
+---
+layout: page
+title: Research
+eyebrow: "Questions"
+description: "Editable research directions, notes, and future publication links."
+permalink: /research/
+nav_key: research
+---
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p>{{ site.data.research.intro }}</p>
+    </div>
+    <div class="direction-stack">
+      {% for area in site.data.research.areas %}
+        <article id="{{ area.anchor }}" class="direction-card reveal">
+          <div>
+            <p class="eyebrow">Direction {{ forloop.index }}</p>
+            <h2>{{ area.title }}</h2>
+            <p>{{ area.summary }}</p>
+            <ul class="feature-list">
+              {% for detail in area.details %}
+                <li>{{ detail }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <aside class="keyword-panel">
+            {% for keyword in area.keywords %}
+              <span>{{ keyword }}</span>
+            {% endfor %}
+          </aside>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

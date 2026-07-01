@@ -1,0 +1,39 @@
+intro: "Research interests are intentionally written as editable directions rather than fixed claims. Replace or expand them as your PhD work becomes clearer."
+
+areas:
+  - title: "AI agents for scientific workflows"
+    anchor: "ai-agents"
+    summary: "Designing agent systems that can plan, use tools, inspect evidence, and leave readable traces for later review."
+    details:
+      - "Workflow decomposition, tool calling, and verification loops."
+      - "Practical lessons from building agent prototypes around data, code, and browser tasks."
+      - "Emphasis on maintainable systems over one-off demos."
+    keywords:
+      - "Agents"
+      - "Tool use"
+      - "Workflow design"
+      - "Verification"
+  - title: "Local and efficient language models"
+    anchor: "local-llms"
+    summary: "Exploring how quantization, local inference, and model routing can make AI systems cheaper, safer, and easier to iterate."
+    details:
+      - "Notes from Base-LLM and quantization study."
+      - "Experiments with Ollama-style local interfaces and API-based fallbacks."
+      - "Interest in practical deployment tradeoffs rather than benchmark-only comparisons."
+    keywords:
+      - "LLM"
+      - "Quantization"
+      - "Ollama"
+      - "Deployment"
+  - title: "Acousto-biophotonics and optical sensing"
+    anchor: "biophotonics"
+    summary: "Following research questions around optical sensing, acoustic signals, biological measurement, and scientific instrumentation."
+    details:
+      - "Micro- and nanoscale sensing concepts."
+      - "Signal extraction, imaging, and measurement workflows."
+      - "Connections between computational tools and experimental practice."
+    keywords:
+      - "Optical sensing"
+      - "Biophotonics"
+      - "Instrumentation"
+      - "Signals"

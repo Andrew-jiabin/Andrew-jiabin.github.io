@@ -1,0 +1,39 @@
+name: "Jiabin Lin"
+display_name: "Andrew Jiabin Lin"
+short_name: "Andrew"
+role: "Graduate student"
+affiliation: "Peking University"
+location: "Beijing, China"
+email: ""
+avatar: "/assets/images/profile/jiabin-lin.png"
+hero_image: "/assets/images/site/hero-workspace.png"
+tagline: "Building useful AI tools, readable research notes, and careful scientific workflows."
+intro: "I am interested in AI agents, scientific computing, optical sensing, and the craft of turning messy ideas into reliable tools. This site collects my research notes, project logs, publications, and learning records."
+
+focus:
+  - "AI agents for scientific workflows"
+  - "Local and quantized language models"
+  - "Acousto-biophotonics and optical sensing"
+  - "Readable engineering notes"
+
+social:
+  github:
+    label: "GitHub"
+    url: "https://github.com/Andrew-jiabin"
+  scholar:
+    label: "Google Scholar"
+    url: ""
+  orcid:
+    label: "ORCID"
+    url: ""
+  linkedin:
+    label: "LinkedIn"
+    url: ""
+
+hero_actions:
+  - label: "View projects"
+    url: "/projects/"
+    style: "primary"
+  - label: "Read notes"
+    url: "/blog/"
+    style: "secondary"

@@ -1,3 +1,22 @@
-title: Andrew的个人站
-description: 记录生活与技术
-theme: null  # 禁用GitHub默认主题，我们要自己写
+title: "Andrew Jiabin Lin"
+description: "Personal website for research notes, AI agent experiments, projects, and academic updates."
+author: "Jiabin Lin"
+lang: "zh-CN"
+timezone: "Asia/Shanghai"
+url: "https://Andrew-jiabin.github.io"
+baseurl: ""
+
+theme: null
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+exclude:
+  - editing-guide/

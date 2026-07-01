@@ -1,0 +1,42 @@
+education:
+  - degree: "Graduate student"
+    institution: "Peking University"
+    period: "2026-present"
+    details:
+      - "Research interests include AI tools for scientific workflows, optical sensing, and biomedical imaging."
+
+experience:
+  - title: "Agentw4Science"
+    organization: "Hello-Agents study team"
+    period: "2026"
+    details:
+      - "Team leader for course-based learning and project notes."
+      - "Focused on agent frameworks, tool use, planning, and reflection."
+  - title: "DataWhale2026"
+    organization: "Base-LLM learning track"
+    period: "2026"
+    details:
+      - "Studied model fundamentals, quantization, autoencoders, and efficient adaptation."
+
+skills:
+  - group: "Programming"
+    items:
+      - "Python"
+      - "JavaScript"
+      - "Markdown"
+      - "Git"
+  - group: "AI systems"
+    items:
+      - "LLM agents"
+      - "Tool calling"
+      - "Local model workflows"
+      - "Prompted verification"
+  - group: "Research habits"
+    items:
+      - "Literature notes"
+      - "Reproducible workflows"
+      - "Technical writing"
+      - "Experiment logs"
+
+awards: []
+cv_pdf: ""

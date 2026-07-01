@@ -1,15 +1,89 @@
 ---
 layout: default
-title: 首页
+title: Home
+nav_key: home
 ---
 
-<h3>最新文章</h3>
-<ul>
-    {% for post in site.posts %}
-    <li>
-        <span>{{ post.date | date: "%Y-%m-%d" }}</span>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <small>[{{ post.category }}]</small>
-    </li>
+<section class="home-hero" style="--hero-image: url('{{ site.data.profile.hero_image | relative_url }}')">
+  <div class="hero-scrim"></div>
+  <div class="container home-hero-content reveal">
+    <p class="eyebrow">{{ site.data.profile.affiliation }}</p>
+    <h1>{{ site.data.profile.display_name }}</h1>
+    <p class="hero-lead">{{ site.data.profile.intro }}</p>
+    <div class="button-row">
+      {% for action in site.data.profile.hero_actions %}
+        <a class="button button-{{ action.style }}" href="{{ action.url | relative_url }}">{{ action.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="container metric-grid">
+    {% for metric in site.data.home.metrics %}
+      <a class="metric-card reveal" href="{{ metric.url | relative_url }}">
+        <strong>{{ metric.value }}</strong>
+        <span>{{ metric.label }}</span>
+      </a>
     {% endfor %}
-</ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split-layout">
+    <div class="section-copy reveal">
+      <p class="eyebrow">Profile</p>
+      <h2>Research-minded engineering, written down clearly.</h2>
+      <p>{{ site.data.profile.tagline }}</p>
+      <ul class="feature-list">
+        {% for item in site.data.profile.focus %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="profile-panel reveal">
+      <img src="{{ site.data.profile.avatar | relative_url }}" alt="Portrait of {{ site.data.profile.name }}">
+      <div>
+        <h3>{{ site.data.profile.name }}</h3>
+        <p>{{ site.data.profile.role }} · {{ site.data.profile.affiliation }}</p>
+        <p>{{ site.data.profile.location }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-muted">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow">Explore</p>
+      <h2>What this site is for</h2>
+    </div>
+    <div class="card-grid">
+      {% for item in site.data.home.featured_sections %}
+        <a class="info-card reveal" href="{{ item.url | relative_url }}">
+          <p class="eyebrow">{{ item.eyebrow }}</p>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading reveal">
+      <p class="eyebrow">Latest</p>
+      <h2>Recent writing</h2>
+    </div>
+    <div class="post-list">
+      {% for post in site.posts limit:3 %}
+        <a class="post-card reveal" href="{{ post.url | relative_url }}">
+          <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+          <h3>{{ post.title }}</h3>
+          {% if post.category %}<span>{{ post.category }}</span>{% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

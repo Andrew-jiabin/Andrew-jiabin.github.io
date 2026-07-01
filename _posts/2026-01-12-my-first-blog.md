@@ -3,6 +3,7 @@ layout: post
 title: "我的第一篇自建博客"
 date: 2026-01-12
 category: "技术杂谈"
+permalink: /blog/2026/01/12/hello-agents-task-00/
 ---
 
 ## hello-agents进阶篇 | 202601 Blog
