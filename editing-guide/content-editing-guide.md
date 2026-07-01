@@ -16,7 +16,7 @@
 
 ## `_data/profile.yml`
 
-用途：控制全站个人基础信息、头像、首页主图、联系方式、社交链接和首页按钮。
+用途：控制全站个人基础信息、头像、联系方式、社交链接和首页按钮。
 
 主要影响页面：
 
@@ -36,7 +36,6 @@
 - `location`：地点。
 - `email`：邮箱。留空 `""` 时 Contact 和页脚不会显示邮箱。
 - `avatar`：头像路径，当前放在 `assets/images/profile/`。
-- `hero_image`：首页大图路径，当前放在 `assets/images/site/`。
 - `tagline`：短句，主要用于首页和页脚。
 - `intro`：较长个人简介，Home 和 About 会显示。
 - `focus`：关注方向列表，Home、About、Contact 都会用到。

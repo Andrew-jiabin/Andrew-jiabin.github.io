@@ -40,7 +40,7 @@
 - `:root` 里的颜色变量。
 - 卡片的 `border-top` / `border-left` 强调色。
 - 标签、按钮、导航高亮的背景色。
-- `assets/images/site/hero-workspace.png` 首页背景图。
+- 首页 hero 彩虹渐变背景，定义在 `css/style.css` 的 `.home-hero`。
 
 谨慎改：
 
@@ -55,16 +55,20 @@
 - 只靠颜色区分重要状态，而没有文字或结构提示。
 - 为了鲜艳牺牲正文可读性。
 
-## 首页背景图
+## 首页背景
 
-首页背景图位置：
+首页不再使用具体内容图片，而是使用 CSS 写出的柔和彩虹渐变。相关位置：
 
-```text
-assets/images/site/hero-workspace.png
+```css
+.home-hero
+.home-hero::before
+.home-hero::after
+.hero-scrim
 ```
 
-它是本地生成的几何工作台风格图片，用来表达 research / code / reflection。替换时建议保持：
+维护建议：
 
-- 横向大图，推荐 16:9。
-- 画面左侧不要过于复杂，因为首页文字主要在左侧。
-- 色彩可以鲜活，但应偏柔和、通透，不要让标题和按钮看不清。
+- 背景应保持抽象，不要放包含文字、图标、人物或具体科研内容的图片。
+- 可以调整渐变颜色，但应保持柔和、通透。
+- 必须保留足够深的 `.hero-scrim`，保证首页白色标题和简介可读。
+- 手机端有单独的 `.home-hero` 和 `.hero-scrim` 覆盖规则，改桌面时也要检查手机端。
