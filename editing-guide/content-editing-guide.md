@@ -35,7 +35,7 @@
 - `affiliation`：机构，例如 `Peking University`。
 - `location`：地点。
 - `email`：邮箱。留空 `""` 时 Contact 和页脚不会显示邮箱。
-- `avatar`：头像路径，当前放在 `assets/images/profile/`。
+- `avatar`：头像路径，当前使用纯色占位图 `assets/images/profile/avatar-placeholder.svg`，以后可以替换成自己的图片。
 - `tagline`：短句，主要用于首页和页脚。
 - `intro`：较长个人简介，Home 和 About 会显示。
 - `focus`：关注方向列表，Home、About、Contact 都会用到。
@@ -62,7 +62,7 @@ social:
 
 更换头像：
 
-1. 把新头像放到 `assets/images/profile/`，例如 `assets/images/profile/jiabin-lin-2026.png`。
+1. 把新头像放到 `assets/images/profile/`，例如 `assets/images/profile/jiabin-lin-2026.png`。如果暂时不想显示真人照片，可以继续使用纯色占位图。
 2. 修改：
 
 ```yml
@@ -466,7 +466,7 @@ links:
 路径写法：
 
 ```yml
-avatar: "/assets/images/profile/jiabin-lin.png"
+avatar: "/assets/images/profile/avatar-placeholder.svg"
 ```
 
 ```md

@@ -253,7 +253,6 @@ code {
 .home-hero-content {
   position: relative;
   z-index: 1;
-  max-width: 820px;
   padding: 84px 0 96px;
 }
 
